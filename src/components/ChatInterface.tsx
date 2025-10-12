@@ -62,7 +62,7 @@ export const ChatInterface = ({ messages, onSendMessage, disabled }: ChatInterfa
       </div>
 
       {/* Messages Area */}
-      <ScrollArea className="flex-1 p-4" ref={scrollRef}>
+      <div className="flex-1 overflow-y-auto p-4" ref={scrollRef}>
         <div className="space-y-4">
           {messages.length === 0 ? (
             <div className="flex items-center justify-center h-full text-muted-foreground text-sm">
@@ -115,7 +115,7 @@ export const ChatInterface = ({ messages, onSendMessage, disabled }: ChatInterfa
             ))
           )}
         </div>
-      </ScrollArea>
+      </div>
 
       {/* Input Area */}
       <div className="p-4 border-t bg-muted/50">

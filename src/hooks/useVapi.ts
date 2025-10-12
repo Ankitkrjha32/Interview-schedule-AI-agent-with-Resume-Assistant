@@ -68,12 +68,32 @@ export const useVapi = (apiKey: string | null, assistantId: string | null) => {
 
       vapiInstance.on('message', (message: any) => {
         console.log('Message received:', message)
+        
         if (message.type === 'transcript' && message.transcript) {
-          setTranscript(prev => [...prev, {
-            role: message.role,
-            text: message.transcript,
-            timestamp: new Date()
-          }])
+          const transcriptText = message.transcript.trim()
+          if (!transcriptText) return
+          
+          setTranscript(prev => {
+            // Check if this is a continuation of the last message (partial transcript)
+            const lastMessage = prev[prev.length - 1]
+            const isSameRole = lastMessage && lastMessage.role === message.role
+            const isPartial = message.transcriptType === 'partial'
+            
+            // If it's a partial transcript from the same role, update the last message
+            if (isPartial && isSameRole) {
+              return [
+                ...prev.slice(0, -1),
+                { ...lastMessage, text: transcriptText }
+              ]
+            }
+            
+            // Otherwise, add as new message
+            return [...prev, {
+              role: message.role,
+              text: transcriptText,
+              timestamp: new Date()
+            }]
+          })
         }
       })
 
