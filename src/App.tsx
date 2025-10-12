@@ -16,6 +16,7 @@ import Accessibility from "./pages/Accessibility";
 import CookiePolicy from "./pages/CookiePolicy";
 import ReturnsPolicy from "./pages/ReturnsPolicy";
 import Redirect from "./pages/Redirect";
+import VapiAssistant from "./pages/VapiAssistant";
 
 const queryClient = new QueryClient();
 
@@ -31,6 +32,7 @@ const App = () => (
           <Route path="/licensee" element={<Licensee />} />
           <Route path="/owners" element={<Owners />} />
           <Route path="/redirect" element={<Redirect />} />
+          <Route path="/assistant" element={<VapiAssistant />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms-of-service" element={<TermsOfService />} />
           <Route path="/license-disclosure" element={<LicenseDisclosure />} />
