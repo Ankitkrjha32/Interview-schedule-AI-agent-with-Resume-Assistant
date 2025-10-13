@@ -38,16 +38,16 @@ const VapiAssistant = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
+    <div className="min-h-screen bg-gradient-to-br from-background via-primary/5 to-secondary/5">
       <AssistantNavbar />
       <div className="container mx-auto p-6 max-w-6xl">
         {/* Header */}
         <div className="mb-8 text-center pt-8">
-          <h1 className="text-4xl font-bold text-foreground mb-2 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-            AI Assistant
+          <h1 className="text-5xl font-bold text-foreground mb-3 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+            Resume AI Assistant
           </h1>
-          <p className="text-muted-foreground">
-            Connect with your personal AI assistant via voice or chat
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Schedule meetings, get multilingual summaries, and receive expert guidance through AI-powered voice and chat
           </p>
         </div>
 

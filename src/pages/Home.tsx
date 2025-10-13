@@ -9,19 +9,24 @@ const Home = () => {
 
   const features = [
     {
+      icon: Bot,
+      title: 'AI-Powered Agents',
+      description: 'Intelligent AI agents that understand context and provide personalized resume assistance in real-time'
+    },
+    {
       icon: Mic,
-      title: 'Voice Chat',
-      description: 'Natural voice conversations with AI assistant'
+      title: 'Schedule Meetings',
+      description: 'Book consultations and meetings through voice commands with our AI scheduling assistant'
     },
     {
       icon: MessageSquare,
-      title: 'Text Chat',
-      description: 'Instant messaging for quick interactions'
+      title: 'Multilingual Support',
+      description: 'Get your resume summary and suggestions in any language - supporting 100+ languages worldwide'
     },
     {
       icon: Sparkles,
-      title: 'Smart Responses',
-      description: 'Intelligent AI-powered resume assistance'
+      title: 'Smart Analysis',
+      description: 'AI-driven resume analysis, optimization suggestions, and industry-specific recommendations'
     }
   ]
 
@@ -38,15 +43,15 @@ const Home = () => {
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Your Personal
-              <span className="block bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
-                AI Resume Assistant
+              Transform Your Career with
+              <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                AI Resume Intelligence
               </span>
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Experience the future of resume building with voice and chat AI assistance. 
-              Get instant help, personalized suggestions, and professional guidance.
+              Schedule meetings, get multilingual resume summaries, and receive expert guidance 
+              through our advanced AI agents. Available 24/7 in over 100 languages.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -72,11 +77,11 @@ const Home = () => {
 
           {/* Right Image */}
           <div className="relative animate-fade-in delay-300">
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/20 to-primary/10 rounded-3xl blur-3xl"></div>
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-secondary/20 to-accent/30 rounded-3xl blur-3xl animate-pulse"></div>
             <img 
               src={heroImage} 
-              alt="AI Assistant Interface" 
-              className="relative rounded-3xl shadow-2xl border border-border/50"
+              alt="AI-powered resume assistant interface with voice and chat capabilities" 
+              className="relative rounded-3xl shadow-2xl border border-primary/20 hover:scale-105 transition-transform duration-500"
             />
           </div>
         </div>
@@ -84,28 +89,28 @@ const Home = () => {
 
       {/* Features Section */}
       <section className="container mx-auto px-6 pb-20">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            Powerful Features
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-foreground mb-4">
+            Advanced AI Features
           </h2>
-          <p className="text-muted-foreground text-lg">
-            Everything you need for an intelligent assistant experience
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Powered by cutting-edge AI technology to revolutionize your resume building experience
           </p>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, index) => (
             <Card 
               key={index}
-              className="p-8 hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border-border/50 bg-card/50 backdrop-blur-sm"
+              className="p-6 hover:shadow-xl transition-all duration-300 hover:-translate-y-2 border-primary/20 bg-gradient-to-br from-card via-card to-primary/5 backdrop-blur-sm group"
             >
-              <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mb-6">
-                <feature.icon className="h-7 w-7 text-primary" />
+              <div className="h-16 w-16 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center mb-6 group-hover:scale-110 transition-transform shadow-lg">
+                <feature.icon className="h-8 w-8 text-primary-foreground" />
               </div>
-              <h3 className="text-xl font-semibold text-foreground mb-3">
+              <h3 className="text-xl font-bold text-foreground mb-3">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed text-sm">
                 {feature.description}
               </p>
             </Card>
@@ -115,21 +120,26 @@ const Home = () => {
 
       {/* CTA Section */}
       <section className="container mx-auto px-6 pb-20">
-        <Card className="p-12 text-center bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border-primary/20">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            Ready to get started?
-          </h2>
-          <p className="text-muted-foreground text-lg mb-8 max-w-2xl mx-auto">
-            Transform your resume experience with AI-powered voice and chat assistance
-          </p>
-          <Button 
-            size="lg" 
-            className="text-lg h-14 px-8"
-            onClick={() => navigate('/assistant')}
-          >
-            Launch Assistant
-            <ArrowRight className="ml-2 h-5 w-5" />
-          </Button>
+        <Card className="relative overflow-hidden p-12 text-center bg-gradient-to-br from-primary via-secondary to-accent border-0">
+          <div className="absolute inset-0 bg-grid-white/10"></div>
+          <div className="relative z-10">
+            <h2 className="text-4xl font-bold text-primary-foreground mb-4">
+              Start Building Your Future Today
+            </h2>
+            <p className="text-primary-foreground/90 text-lg mb-8 max-w-2xl mx-auto">
+              Join thousands of professionals using AI to create standout resumes. 
+              Schedule meetings, get instant summaries in any language, and unlock your career potential.
+            </p>
+            <Button 
+              size="lg" 
+              variant="secondary"
+              className="text-lg h-14 px-10 shadow-xl hover:shadow-2xl hover:scale-105 transition-all"
+              onClick={() => navigate('/assistant')}
+            >
+              Launch AI Assistant
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </div>
         </Card>
       </section>
     </div>
