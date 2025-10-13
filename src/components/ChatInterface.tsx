@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Card } from '@/components/ui/card'
 import { ScrollArea } from '@/components/ui/scroll-area'
+import { useNavigate } from 'react-router-dom'
 
 interface Message {
   role: 'user' | 'assistant'
@@ -17,20 +18,23 @@ interface ChatInterfaceProps {
   disabled?: boolean
 }
 
+
 export const ChatInterface = ({ messages, onSendMessage, disabled }: ChatInterfaceProps) => {
   const [input, setInput] = useState('')
   const scrollRef = useRef<HTMLDivElement>(null)
-
+  const navigate = useNavigate()
   useEffect(() => {
     if (scrollRef.current) {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight
     }
   }, [messages])
 
+
   const handleSend = () => {
     if (input.trim() && onSendMessage) {
       onSendMessage(input.trim())
       setInput('')
+      navigate('/chat');
     }
   }
 

@@ -10,24 +10,24 @@ const Home = () => {
 
   const features = [
     {
-      icon: Bot,
-      title: 'AI-Powered Agents',
-      description: 'Intelligent AI agents that understand context and provide personalized resume assistance in real-time'
-    },
-    {
       icon: Mic,
-      title: 'Schedule Meetings',
-      description: 'Book consultations and meetings through voice commands with our AI scheduling assistant'
+      title: 'Voice Assistant',
+      description: 'Full interactive voice experience with real-time conversations, voice commands, and natural speech interaction'
     },
     {
       icon: MessageSquare,
-      title: 'Multilingual Support',
-      description: 'Get your resume summary and suggestions in any language - supporting 100+ languages worldwide'
+      title: 'Text Chat Only',
+      description: 'Cost-effective text-based conversations using Vapi Chat API - no call credits required'
     },
     {
       icon: Sparkles,
-      title: 'Smart Analysis',
-      description: 'AI-driven resume analysis, optimization suggestions, and industry-specific recommendations'
+      title: 'Multilingual Support',
+      description: 'Get your resume guidance in any language - supporting 100+ languages for global accessibility'
+    },
+    {
+      icon: Bot,
+      title: 'Smart AI Analysis',
+      description: 'AI-driven resume analysis, optimization suggestions, and industry-specific career recommendations'
     }
   ]
 
@@ -47,13 +47,13 @@ const Home = () => {
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
               Transform Your Career
               <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                AI Resume Intelligence
+                AI Assistant Platform
               </span>
             </h1>
             
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Schedule meetings, get multilingual resume summaries, and receive expert guidance 
-              through our advanced AI agents. Available 24/7 in over 100 languages.
+              Get personalized resume guidance through voice calls or text chat. Choose your preferred 
+              interaction method - full voice experience or cost-effective text-only chat.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
@@ -62,18 +62,23 @@ const Home = () => {
                 className="text-lg h-14 px-8"
                 onClick={() => navigate('/assistant')}
               >
-                Get Started
-                <ArrowRight className="ml-2 h-5 w-5" />
+                <Mic className="mr-2 h-5 w-5" />
+                Voice Assistant
               </Button>
               <Button 
                 size="lg" 
                 variant="outline" 
                 className="text-lg h-14 px-8"
-                onClick={() => navigate('/assistant')}
+                onClick={() => navigate('/chat')}
               >
-                <Mic className="mr-2 h-5 w-5" />
-                Try Voice Chat
+                <MessageSquare className="mr-2 h-5 w-5" />
+                Text Chat Only
               </Button>
+            </div>
+            
+            <div className="text-sm text-muted-foreground space-y-1">
+              <p>💰 <strong>Voice Assistant:</strong> Full interactive experience (uses call credits)</p>
+              <p>💬 <strong>Text Chat:</strong> Cost-effective text-only conversation (no call credits)</p>
             </div>
           </div>
 
@@ -94,10 +99,10 @@ const Home = () => {
       <section className="container mx-auto px-6 pb-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-foreground mb-4">
-            Advanced AI Features
+            Choose Your AI Experience
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Powered by cutting-edge AI technology to revolutionize your resume building experience
+            Full voice interaction or cost-effective text chat - both powered by advanced Vapi AI technology
           </p>
         </div>
 

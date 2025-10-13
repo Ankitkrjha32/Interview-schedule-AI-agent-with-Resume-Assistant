@@ -31,17 +31,17 @@ const AssistantNavbar = () => {
                 onClick={() => navigate('/')}
                 className="gap-2"
               >
-                <Home className="h-4 w-4" />
-                Home
+                <Button className="h-4 w-4" />
+                Chat with AI
               </Button>
             ) : (
               <Button 
                 size="sm"
-                onClick={() => navigate('/assistant')}
+                onClick={() => navigate('/chat')}
                 className="gap-2"
               >
                 <Bot className="h-4 w-4" />
-                Launch Assistant
+                Chat with AI
               </Button>
             )}
           </div>
