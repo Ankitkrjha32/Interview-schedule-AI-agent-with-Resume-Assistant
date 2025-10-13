@@ -6,6 +6,7 @@ import { VoiceCallInterface } from '@/components/VoiceCallInterface'
 import { ConfigPanel } from '@/components/ConfigPanel'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Alert, AlertDescription } from '@/components/ui/alert'
+import AssistantNavbar from '@/components/AssistantNavbar'
 
 const VapiAssistant = () => {
   const [apiKey, setApiKey] = useState<string | null>(null)
@@ -37,11 +38,12 @@ const VapiAssistant = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
+      <AssistantNavbar />
       <div className="container mx-auto p-6 max-w-6xl">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-2">
+        <div className="mb-8 text-center pt-8">
+          <h1 className="text-4xl font-bold text-foreground mb-2 bg-gradient-to-r from-primary to-primary/70 bg-clip-text text-transparent">
             AI Assistant
           </h1>
           <p className="text-muted-foreground">
