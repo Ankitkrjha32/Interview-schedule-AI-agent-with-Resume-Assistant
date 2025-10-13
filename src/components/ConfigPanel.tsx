@@ -5,6 +5,7 @@ import { Input } from '@/components/ui/input'
 import { Label } from '@/components/ui/label'
 import { Card } from '@/components/ui/card'
 
+
 interface ConfigPanelProps {
   onConfigChange: (apiKey: string, assistantId: string) => void
   isConfigured: boolean
@@ -16,18 +17,26 @@ export const ConfigPanel = ({ onConfigChange, isConfigured }: ConfigPanelProps) 
   const [showApiKey, setShowApiKey] = useState(false)
   const [isEditing, setIsEditing] = useState(!isConfigured)
 
-  // Load from localStorage on mount
+ // Initialize with environment variables or localStorage on component mount
   useEffect(() => {
-    const savedApiKey = localStorage.getItem('vapi_api_key')
-    const savedAssistantId = localStorage.getItem('vapi_assistant_id')
-    
-    if (savedApiKey) setApiKey(savedApiKey)
-    if (savedAssistantId) setAssistantId(savedAssistantId)
-    
-    if (savedApiKey && savedAssistantId) {
-      onConfigChange(savedApiKey, savedAssistantId)
+    const envApiKey = import.meta.env.VITE_VAPI_API_KEY || ''
+    const envAssistantId = import.meta.env.VITE_VAPI_ASSISTANT_ID || ''
+    const storedApiKey = localStorage.getItem('vapi_api_key') || ''
+    const storedAssistantId = localStorage.getItem('vapi_assistant_id') || ''
+
+    // Prioritize localStorage, then environment variables
+    const finalApiKey = storedApiKey || envApiKey
+    const finalAssistantId = storedAssistantId || envAssistantId
+
+    setApiKey(finalApiKey)
+    setAssistantId(finalAssistantId)
+
+    // If we have both values, notify parent and set as configured
+    if (finalApiKey && finalAssistantId) {
+      onConfigChange(finalApiKey, finalAssistantId)
     }
   }, [])
+
 
   const handleSave = () => {
     if (apiKey && assistantId) {
@@ -60,8 +69,8 @@ export const ConfigPanel = ({ onConfigChange, isConfigured }: ConfigPanelProps) 
   }
 
   return (
-    <Card className="p-6">
-      <div className="space-y-4">
+    <Card className="">
+      <div className=" hidden">
         <div>
           <h3 className="text-lg font-semibold text-foreground mb-2">Configuration</h3>
           <p className="text-sm text-muted-foreground">

@@ -51,13 +51,13 @@ const VapiAssistant = () => {
           </p>
         </div>
 
-        {/* Configuration Panel */}
-        <div className="mb-6">
+        {/* Configuration Panel */} 
+         <div className="mb-6">
           <ConfigPanel 
             onConfigChange={handleConfigChange}
             isConfigured={isConfigured}
           />
-        </div>
+        </div> 
 
         {/* Error Alert */}
         {error && (

@@ -3,6 +3,7 @@ import { Bot, MessageSquare, Mic, Sparkles, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card } from '@/components/ui/card'
 import heroImage from '@/assets/hero-ai-assistant.jpg'
+import AssistantNavbar from '@/components/AssistantNavbar'
 
 const Home = () => {
   const navigate = useNavigate()
@@ -32,18 +33,19 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-background via-muted/20 to-background">
+      <AssistantNavbar />
       {/* Hero Section */}
       <section className="container mx-auto px-6 pt-20 pb-32">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <Bot className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium text-primary">AI-Powered Assistant</span>
+              <Bot className="h-4 w-4 text-black" />
+              <span className="text-sm font-medium text-black">AI-Powered Assistant</span>
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Transform Your Career with
+              Transform Your Career
               <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
                 AI Resume Intelligence
               </span>
@@ -79,8 +81,9 @@ const Home = () => {
           <div className="relative animate-fade-in delay-300">
             <div className="absolute inset-0 bg-gradient-to-r from-primary/30 via-secondary/20 to-accent/30 rounded-3xl blur-3xl animate-pulse"></div>
             <img 
-              src={heroImage} 
+              src="https://bymilliepham.com/wp-content/uploads/2023/05/what-is-an-AI-meeting-assistant.jpg" 
               alt="AI-powered resume assistant interface with voice and chat capabilities" 
+              // width={500}
               className="relative rounded-3xl shadow-2xl border border-primary/20 hover:scale-105 transition-transform duration-500"
             />
           </div>
