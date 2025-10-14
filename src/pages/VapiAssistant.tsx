@@ -34,7 +34,7 @@ const VapiAssistant = () => {
   const handleSendMessage = (message: string) => {
     addTextMessage(message, 'user')
     // In a real implementation, you might send this to the assistant
-    // For now, it just adds to the transcript
+    // For now, it just adds to the transcript....
   }
 
   return (
@@ -43,7 +43,7 @@ const VapiAssistant = () => {
       <div className="container mx-auto p-6 max-w-6xl">
         {/* Header */}
         <div className="mb-8 text-center pt-8">
-          <h1 className="text-5xl font-bold text-foreground mb-3 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+          <h1 className="text-5xl font-bold mb-3 bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
             Resume AI Assistant
           </h1>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
