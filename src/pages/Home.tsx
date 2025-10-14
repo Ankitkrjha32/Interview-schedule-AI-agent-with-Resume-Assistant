@@ -47,14 +47,14 @@ const Home = () => {
           {/* Left Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20">
-              <Bot className="h-4 w-4 text-black" />
-              <span className="text-sm font-medium text-black">AI-Powered Assistant</span>
+              <Bot className="h-4 w-4 text-primary" />
+              <span className="text-sm font-medium text-primary">Professional AI Assistant</span>
             </div>
             
             <h1 className="text-5xl lg:text-6xl font-bold text-foreground leading-tight">
-              Transform Your Career
-              <span className="block bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
-                AI Assistant Platform
+              Transform Your Career with
+              <span className="block text-primary">
+                Professional AI Assistance
               </span>
             </h1>
             
