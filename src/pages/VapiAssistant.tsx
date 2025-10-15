@@ -34,7 +34,7 @@ const VapiAssistant = () => {
   const handleSendMessage = (message: string) => {
     addTextMessage(message, 'user')
     // In a real implementation, you might send this to the assistant
-    // For now, it just adds to the transcript....
+    // For now, it just adds to the transcript....,
   }
 
   return (
