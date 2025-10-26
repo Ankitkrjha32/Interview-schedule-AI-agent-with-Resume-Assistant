@@ -10,16 +10,15 @@ Welcome to **Readmefile**!
 
 The Personal AI Resume Assistant is an intelligent automation platform designed to revolutionize professional workflow management and career development. This comprehensive solution leverages artificial intelligence to streamline meeting coordination, automate administrative tasks, and provide detailed professional insights through advanced reporting capabilities.
 
-<div align="center">
-  <img src="readme_image/2.png" alt="AI Assistant Features" width="700"/>
-</div>
-
 
 <div align="center">
   <img src="readme_image/3.png" alt="AI Assistant Features" width="700"/>
 </div>
 
 
+<div align="center">
+  <img src="readme_image/4.png" alt="Technology Stack & Workflow" width="700"/>
+</div>
 
 
 ## Features
@@ -56,10 +55,11 @@ The Personal AI Resume Assistant is an intelligent automation platform designed 
 - **Integration**: Google Workspace APIs for seamless data management
 - **Backend**: Custom-built tools and services for optimal performance
 
-<div align="center">
-  <img src="readme_image/4.png" alt="Technology Stack & Workflow" width="700"/>
-</div>
 
+
+<div align="center">
+  <img src="readme_image/2.png" alt="AI Assistant Features" width="700"/>
+</div>
 
 <div align="center">
   <video src="readme_image/5.mp4" alt="Technology Stack & Workflow" width="700"/>
