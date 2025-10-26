@@ -14,6 +14,14 @@ The Personal AI Resume Assistant is an intelligent automation platform designed 
   <img src="readme_image/2.png" alt="AI Assistant Features" width="700"/>
 </div>
 
+
+<div align="center">
+  <img src="readme_image/3.png" alt="AI Assistant Features" width="700"/>
+</div>
+
+
+
+
 ## Features
 
 ### 🤖 AI-Powered Meeting Coordination
@@ -49,7 +57,12 @@ The Personal AI Resume Assistant is an intelligent automation platform designed 
 - **Backend**: Custom-built tools and services for optimal performance
 
 <div align="center">
-  <img src="readme_image/3.png" alt="Technology Stack & Workflow" width="700"/>
+  <img src="readme_image/4.png" alt="Technology Stack & Workflow" width="700"/>
+</div>
+
+
+<div align="center">
+  <video src="readme_image/5.mp4" alt="Technology Stack & Workflow" width="700"/>
 </div>
 
 ## Benefits
